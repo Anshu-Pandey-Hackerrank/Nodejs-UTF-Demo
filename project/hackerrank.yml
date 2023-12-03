@@ -1,0 +1,20 @@
+version: 1.0
+configuration:
+  has_webserver: true
+  readonly_paths:
+    - test/index.spec.js
+    - test/mocha.opts
+    - data/data.js
+  scoring:
+    command: "npm test"
+    files:
+      - unit.xml
+  ide_config:
+    default_open_files:
+      - app.js
+      - routes/index.js
+      - controllers/controller.js
+    project_menu:
+      run: npm start
+      install: npm install
+      test: npm test

@@ -1,0 +1,14 @@
+version: 1.0
+configuration:
+  has_webserver: true
+  readonly_paths:
+    - project/src/main/resources/data.sql
+  scoring:
+    command: "bash test/main.sh"
+  ide_config:
+    default_open_files:
+      - project/src/main/java/com/hackerrank/api/Application.java
+    project_menu:
+      run: cd project && mvn spring-boot:run
+      install: cd project && mvn clean install 
+      test: bash test/main.sh
