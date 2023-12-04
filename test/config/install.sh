@@ -1,1 +1,1 @@
-mvn clean install
+npm install

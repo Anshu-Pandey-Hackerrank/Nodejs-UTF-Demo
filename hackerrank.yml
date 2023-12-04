@@ -2,13 +2,17 @@ version: 1.0
 configuration:
   has_webserver: true
   readonly_paths:
-    - project/src/main/resources/data.sql
+    - project/test/index.spec.js
+    - project/test/mocha.opts
+    - project/data/data.js
   scoring:
     command: "bash test/main.sh"
   ide_config:
     default_open_files:
-      - project/src/main/java/com/hackerrank/api/Application.java
+      - project/app.js
+      - project/routes/index.js
+      - project/controllers/controller.js
     project_menu:
-      run: cd project && mvn spring-boot:run
-      install: cd project && mvn clean install 
-      test: bash test/main.sh
+      run: npm -C project start
+      install: npm -C project install
+      test: bash test/main.sh 
