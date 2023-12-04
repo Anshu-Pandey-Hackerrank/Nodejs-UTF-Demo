@@ -4,7 +4,7 @@
         "tests": [
           {
             "name": "Testcase_1",
-            "endpoint": "/5/usrs",
+            "endpoint": "/5/users",
             "type": "GET",
             "headers": {
               "contentType": "application/json"
